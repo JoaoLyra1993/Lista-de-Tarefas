@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FormTarefa.css";
+import GenericButton from "../Button/Button";
 
 const FormTarefa = ({ addTarefa }) => {
   const [text, setText] = useState("");
@@ -20,6 +21,7 @@ const FormTarefa = ({ addTarefa }) => {
       <h2>Criar Tarefa</h2>
       <form className="form-container" onSubmit={handleSubmit}>
         <input
+          className="form-text"
           type="text"
           value={text}
           id="todo-input"
@@ -43,7 +45,7 @@ const FormTarefa = ({ addTarefa }) => {
             <option value="Pessoal">Pessoal</option>
           </select>
         </label>
-        <button className="todo-button">Incluir</button>
+        <GenericButton texto={"Criar"}></GenericButton>
       </form>
     </div>
   );

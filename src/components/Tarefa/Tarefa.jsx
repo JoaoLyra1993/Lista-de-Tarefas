@@ -1,3 +1,4 @@
+import GenericButton from "../Button/Button";
 import "./Tarefa.css";
 
 const Tarefa = ({ tarefa, removeTarefa, completarTarefa }) => {
@@ -18,8 +19,14 @@ const Tarefa = ({ tarefa, removeTarefa, completarTarefa }) => {
         </div>
       </div>
       <div className="button-container">
-        <button onClick={() => completarTarefa(tarefa.id)}>Completar</button>
-        <button onClick={() => removeTarefa(tarefa.id)}>Excluir</button>
+        <GenericButton
+          onClick={() => completarTarefa(tarefa.id)}
+          texto={"Completar"}
+        ></GenericButton>
+        <GenericButton
+          onClick={() => removeTarefa(tarefa.id)}
+          texto={"Excluir"}
+        ></GenericButton>
       </div>
     </div>
   );
