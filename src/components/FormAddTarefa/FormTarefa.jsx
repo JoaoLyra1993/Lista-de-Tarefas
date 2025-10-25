@@ -45,7 +45,7 @@ const FormTarefa = ({ addTarefa }) => {
             <option value="Pessoal">Pessoal</option>
           </select>
         </label>
-        <GenericButton texto={"Criar"}></GenericButton>
+        <GenericButton texto={"Criar"} acao={() => {}}></GenericButton>
       </form>
     </div>
   );

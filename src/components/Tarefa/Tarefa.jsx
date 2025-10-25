@@ -20,12 +20,12 @@ const Tarefa = ({ tarefa, removeTarefa, completarTarefa }) => {
       </div>
       <div className="button-container">
         <GenericButton
-          onClick={() => completarTarefa(tarefa.id)}
           texto={"Completar"}
+          acao={() => completarTarefa(tarefa.id)}
         ></GenericButton>
         <GenericButton
-          onClick={() => removeTarefa(tarefa.id)}
           texto={"Excluir"}
+          acao={() => removeTarefa(tarefa.id)}
         ></GenericButton>
       </div>
     </div>

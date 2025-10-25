@@ -1,7 +1,11 @@
 import "./Button.css";
 
-const GenericButton = ({ texto }) => {
-  return <button className="g-button">{texto}</button>;
+const GenericButton = ({ texto, acao }) => {
+  return (
+    <button onClick={() => acao()} className="g-button">
+      {texto}
+    </button>
+  );
 };
 
 export default GenericButton;
