@@ -30,7 +30,7 @@ const FormTarefa = ({ addTarefa }) => {
             setText(e.target.value);
           }}
         />
-        <label>
+        <label className="label-form">
           <select
             className="form-select"
             required
