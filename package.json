@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/JoaoLyra1993/Lista-de-Tarefas",
+  "homepage": "https://JoaoLyra1993.github.io/Lista-de-Tarefas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
