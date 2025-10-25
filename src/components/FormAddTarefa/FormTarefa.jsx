@@ -18,7 +18,7 @@ const FormTarefa = ({ addTarefa }) => {
   return (
     <div className="form-criar-Tarefa">
       <h2>Criar Tarefa</h2>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"
           value={text}
@@ -30,6 +30,7 @@ const FormTarefa = ({ addTarefa }) => {
         />
         <label>
           <select
+            className="form-select"
             required
             value={tipo}
             onChange={(e) => {
