@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./FormTarefa.css";
 
 const FormTarefa = ({ addTarefa }) => {
   const [text, setText] = useState("");
@@ -21,7 +22,7 @@ const FormTarefa = ({ addTarefa }) => {
         <input
           type="text"
           value={text}
-          id="tarefa-input"
+          id="todo-input"
           placeholder="Informe a tarefa..."
           onChange={(e) => {
             setText(e.target.value);
@@ -41,7 +42,7 @@ const FormTarefa = ({ addTarefa }) => {
             <option value="Pessoal">Pessoal</option>
           </select>
         </label>
-        <button>Incluir</button>
+        <button className="todo-button">Incluir</button>
       </form>
     </div>
   );

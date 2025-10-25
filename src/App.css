@@ -1,32 +1,67 @@
-main {
-    margin: 100px auto;
-    border: 1px solid #444343;
-    border-radius: 10px;
-    max-width: 80%;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2%;
+body {
+  background-color: #fdfbf8;
 }
 
+.main-container {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  margin: 0 auto;
+}
 
-.header {
-    border-bottom: 1px solid black;
-    margin-bottom: 1rem;
+.todo-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 1rem;
+  }
+  .todo-container {
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 16px;
+    max-width: 60vw;
+  }
 }
 
-.listagem_tarefas{
-    margin-bottom: 1rem;
+@media only screen and (min-width: 401px) {
+  .todo-container {
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    align-items: start;
-
+    gap: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+  }
 }
-input{
-    width: 40%;
-    margin-bottom: 0.2rem;
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
 }
 
-button{
-    max-width: 40%;
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  max-width: 60vw;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
 }

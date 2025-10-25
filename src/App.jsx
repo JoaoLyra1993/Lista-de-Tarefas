@@ -62,25 +62,27 @@ function App() {
 
   return (
     <>
-      <main className="app">
-        <h1>Lista de tarefas</h1>
-        <Buscar pesquisa={pesquisa} setPesquisa={setPesquisa} />
-        <div className="lista-tarefas">
-          {tarefas
-            .filter((tarefas) =>
-              tarefas.texto.toLowerCase().includes(pesquisa.toLowerCase())
-            )
-            .map((tarefas) => (
-              <Tarefa
-                key={tarefas.id}
-                tarefa={tarefas}
-                removeTarefa={removeTarefa}
-                completarTarefa={completarTarefa}
-              />
-            ))}
-        </div>
+      <main className="main-container">
+        <h1 className="todo-title">Lista de tarefas</h1>
 
-        <FormTarefa addTarefa={addTarefa} />
+        <div className="todo-container">
+          <Buscar pesquisa={pesquisa} setPesquisa={setPesquisa} />
+          <div className="todo-list-container">
+            {tarefas
+              .filter((tarefas) =>
+                tarefas.texto.toLowerCase().includes(pesquisa.toLowerCase())
+              )
+              .map((tarefas) => (
+                <Tarefa
+                  key={tarefas.id}
+                  tarefa={tarefas}
+                  removeTarefa={removeTarefa}
+                  completarTarefa={completarTarefa}
+                />
+              ))}
+          </div>
+          <FormTarefa addTarefa={addTarefa} />
+        </div>
       </main>
     </>
   );
